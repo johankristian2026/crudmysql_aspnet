@@ -1,0 +1,24 @@
+@model CrudApp.Models.Siswa
+
+<h2>Edit Siswa</h2>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="Nama"></label>
+        <input asp-for="Nama" class="form-control" />
+        <span asp-validation-for="Nama" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Kelas"></label>
+        <input asp-for="Kelas" class="form-control" />
+        <span asp-validation-for="Kelas" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Alamat"></label>
+        <input asp-for="Alamat" class="form-control" />
+        <span asp-validation-for="Alamat" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+    <a asp-action="Index" class="btn btn-secondary">Back</a>
+</form>
